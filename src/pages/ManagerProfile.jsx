@@ -817,7 +817,7 @@ export default function ManagerProfile() {
         setError('');
 
         const response = await fetch(
-          'http://localhost:5000/api/leaves/manager',
+          'https://leaveflow-backend-emz2.onrender.com/api/leaves/manager',
           {
             method: 'GET',
             headers: {
@@ -911,7 +911,7 @@ export default function ManagerProfile() {
       setActionLoading(true);
 
       const response = await fetch(
-        `http://localhost:5000/api/leaves/${id}/status`,
+        `https://leaveflow-backend-emz2.onrender.com/api/leaves/${id}/status`,
         {
           method: 'PUT',
           headers: {
@@ -967,7 +967,7 @@ export default function ManagerProfile() {
       setActionLoading(true);
 
       const response = await fetch(
-        `http://localhost:5000/api/leaves/${id}/status`,
+        `https://leaveflow-backend-emz2.onrender.com/api/leaves/${id}/status`,
         {
           method: 'PUT',
           headers: {

@@ -150,7 +150,7 @@ export default function EmpProfile() {
       ] = await Promise.all([
 
         fetch(
-          'http://localhost:5000/api/leaves/balance',
+          'https://leaveflow-backend-emz2.onrender.com/api/leaves/balance',
           {
             method: 'GET',
             headers
@@ -158,7 +158,7 @@ export default function EmpProfile() {
         ),
 
         fetch(
-          'http://localhost:5000/api/leaves/my',
+          'https://leaveflow-backend-emz2.onrender.com/api/leaves/my',
           {
             method: 'GET',
             headers
@@ -270,7 +270,7 @@ export default function EmpProfile() {
 
 
       const response = await fetch(
-        `http://localhost:5000/api/leaves/${leaveId}/cancel`,
+        `https://leaveflow-backend-emz2.onrender.com/api/leaves/${leaveId}/cancel`,
         {
           method: 'PUT',
 

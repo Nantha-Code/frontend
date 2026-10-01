@@ -77,7 +77,7 @@ export default function LeaveForm({ onBack }) {
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/leaves',
+        'https://leaveflow-backend-emz2.onrender.com/api/leaves',
         {
           method: 'POST',
           headers: {

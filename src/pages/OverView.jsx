@@ -79,10 +79,7 @@ function Sidebar({ pendingCount = 0, managerName = "Manager" }) {
       </div>
 
       <div className="sidebar-profile">
-        <div
-          className="profile-card"
-          onClick={() => navigate('/manager-profile')}
-        >
+        <div className="profile-card">
           <div className="profile-avatar-circle font-semibold text-sm">
             {getInitials(managerName)}
           </div>
@@ -326,7 +323,7 @@ export default function OverView() {
         setError('');
 
         const response = await fetch(
-          'http://localhost:5000/api/leaves/manager',
+          'https://leaveflow-backend-emz2.onrender.com/api/leaves/manager',
           {
             method: 'GET',
             headers: {
