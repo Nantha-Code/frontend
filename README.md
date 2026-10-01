@@ -1,16 +1,67 @@
-# React + Vite
+# LeaveFlow – Leave Management MVP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LeaveFlow is a full-stack Leave Management MVP designed for organizations with two key roles: **Employee** and **Manager**.
 
-Currently, two official plugins are available:
+Employees can view leave balances, submit leave applications, track request status/history, and cancel pending requests. Managers can review incoming leave applications and approve or reject them.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 1. Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+* **Core:** React, Vite, JavaScript (ES6+)
+* **Routing & UI:** React Router, HTML5, CSS3
 
-## Expanding the ESLint configuration
+### Backend
+* **Runtime & Framework:** Node.js, Express.js
+* **Security & Auth:** JWT (JSON Web Tokens), bcryptjs
+* **Utilities:** CORS, dotenv
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Database
+* **Database Engine:** PostgreSQL
+* **Driver:** `pg` (node-postgres)
+
+### Tooling
+* Git, GitHub, VS Code, Postman / cURL
+
+---
+
+## 2. Project Structure
+
+```text
+LeaveFlow/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── ...
+│   ├── package.json
+│   └── vite.config.js
+│
+└── backend/
+    ├── config/
+    │   └── db.js
+    ├── controllers/
+    ├── middleware/
+    ├── models/
+    ├── routes/
+    ├── .env
+    ├── server.js
+    └── package.json
+
+
+
+3. Architecture Overview
+React Frontend
+      │
+      │ HTTP / REST API
+      ▼
+Express.js Backend
+      │
+      ├── Authentication & JWT Middleware
+      ├── Route Controllers
+      └── Database Models
+      │
+      ▼
+PostgreSQL Database
